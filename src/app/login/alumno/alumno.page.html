@@ -1,0 +1,32 @@
+<ion-header>
+  <ion-toolbar color="secondary">
+    <ion-buttons slot="end">
+      <ion-button (click)="cerrarSesion()">
+        <ion-icon name="person-circle-outline" size="large"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+    <ion-title size="large">Bienvenido {{ currentUser?.name }}</ion-title>
+  </ion-toolbar>
+</ion-header>
+<ion-content>
+ 
+  <!-- Elemento para mostrar la foto capturada -->
+  <ion-img id="captured-image" *ngIf="imagenCapturada"></ion-img>
+</ion-content>
+
+
+<ion-footer>
+  <ion-toolbar>
+    <ion-row justify-content-center align-items-center>
+      <ion-col size="auto">
+        <ion-button (click)="abrirCamara()">
+          <ion-icon name="camera-outline" slot="start" size="large"></ion-icon>
+        </ion-button>
+      </ion-col>
+    </ion-row>
+  </ion-toolbar>
+</ion-footer>
+
+
+
+

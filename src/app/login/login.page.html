@@ -1,0 +1,26 @@
+
+<ion-content class="ion-no-padding">
+  <div class="conteiner">
+    <ion-img src="assets/icon/img.png" class="react"></ion-img> 
+  </div>
+  <ion-card>
+    <ion-card-content>
+      <ion-list>
+        <ion-item>
+          <ion-label position="floating">Correo Electrónico</ion-label>
+          <ion-input type="email" [(ngModel)]="email" ></ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-label position="floating">Contraseña</ion-label>
+          <ion-input type="password" [(ngModel)]="password"></ion-input>
+        </ion-item>
+      </ion-list>
+      
+  
+      <ion-button expand="full" (click)="login(email, password)">Iniciar Sesión</ion-button>
+
+      <p class="ion-text-center" routerLink="/recuperar">¿Olvidaste tu Contraseña? 
+      </p>
+    </ion-card-content>
+  </ion-card>
+</ion-content>

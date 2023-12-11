@@ -1,0 +1,34 @@
+<ion-header>
+  <ion-toolbar color="secondary">
+    <ion-buttons slot="end">
+      <ion-button (click)="cerrarSesion()">
+        <ion-icon name="person-circle-outline" size="large"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+    <ion-title size="large">Bienvenido {{ currentUser?.name }}</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-list>
+    <ion-item *ngFor="let curso of cursos" (click)="goAlumnos(curso.id)">
+      <ion-label>
+        
+        <ion-grid>
+          <ion-row>
+            <ion-col size="6">
+              <p>{{curso.id}}</p>
+              <p>Asignatura: {{ curso.asignatura }}</p>
+              <p>Carrera: {{ curso.carrera }}</p>
+              <p>Número del curso: {{ curso.numero }}</p>
+              <p>Horario: {{ curso.hora }}</p>
+  
+            </ion-col>
+            <ion-col size="6">
+            </ion-col>
+          </ion-row>
+        </ion-grid>
+      </ion-label>
+    </ion-item>
+  </ion-list>
+</ion-content> 
